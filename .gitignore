@@ -1,0 +1,46 @@
+# Environment and secrets
+.env
+*.pem
+*_credentials.json
+*_config.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# Media files (large)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.mov
+*.MP4
+*.MOV
+*.heic
+*.HEIC
+
+# Cake folder (media files)
+Cake/
+
+# Output folder (generated content)
+output/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Claude Code
+.claude/

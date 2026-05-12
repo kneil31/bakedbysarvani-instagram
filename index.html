@@ -11,37 +11,38 @@
   <meta name="theme-color" content="#FFFFFF">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-RF+zCSbWMhv8blki99Jy7w=='; style-src 'unsafe-inline'; img-src 'self' https://*.smugmug.com data:; connect-src 'none'; font-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-disBjFCiBRBhMAGW5e6Tbg=='; style-src 'unsafe-inline'; img-src 'self' https://*.smugmug.com data:; connect-src 'none'; font-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none';">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      /* ── Honeybear-inspired: clean white, coral pink, bright & joyful ── */
+      /* ── Honeybear-inspired: white, soft coral, generous, feminine ── */
       --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --font-display: Georgia, 'Times New Roman', serif;
       --bg: #FFFFFF;
-      --bg-soft: #FFF5F3;
-      --text: #1A1A1A;
-      --text-mid: #555555;
-      --text-light: #999999;
-      --pink: #E8636B;
-      --pink-soft: #FDE8E9;
-      --pink-deep: #D14B53;
-      --coral: #F4978E;
-      --gold: #D4A853;
+      --bg-soft: #FDF8F7;
+      --text: #2C2C2C;
+      --text-mid: #666666;
+      --text-light: #AAAAAA;
+      --pink: #D4847C;
+      --pink-soft: #F8EDEB;
+      --pink-deep: #C0706A;
+      --coral: #E8A59A;
+      --gold: #C9A96E;
       --green: #25D366;
-      --shadow: 0 1px 8px rgba(0,0,0,0.06);
-      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
-      --radius: 12px;
+      --shadow: 0 1px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
+      --radius: 8px;
     }
 
     body { font-family: var(--font); background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
 
-    /* ── Header — clean, bright, Honeybear style ──── */
-    .header { text-align: center; padding: 60px 24px 32px; }
-    .header h1 { font-size: 32px; font-weight: 800; color: var(--text); letter-spacing: -0.5px; margin-bottom: 12px; }
+    /* ── Header — Honeybear: serif, generous, soft ── */
+    .header { text-align: center; padding: 9vw 24px 6vw; }
+    .header h1 { font-family: var(--font-display); font-size: 34px; font-weight: 400; color: var(--text); letter-spacing: 0.3px; margin-bottom: 16px; line-height: 1.3; }
     .header h1 span { color: var(--pink); }
-    .header .tagline { font-size: 16px; color: var(--text-mid); font-weight: 400; line-height: 1.5; max-width: 320px; margin: 0 auto 16px; }
-    .header .loc { font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+    .header .tagline { font-size: 15px; color: var(--text-mid); font-weight: 400; line-height: 1.7; max-width: 320px; margin: 0 auto 20px; }
+    .header .loc { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 3px; font-weight: 500; }
 
     /* ── Nav tabs — Honeybear-style clean pills ──── */
     .tabs { display: flex; justify-content: center; gap: 0; padding: 0 20px 24px; position: sticky; top: 0; z-index: 100; background: var(--bg); padding-top: 12px; }
@@ -81,8 +82,8 @@
     .lb-next { right: 12px; }
     .lb-prev:hover, .lb-next:hover { opacity: 1; background: rgba(255,255,255,0.25); }
 
-    /* ── Reviews — clean cards, pink accent ─────── */
-    .section-title { font-size: 24px; font-weight: 800; color: var(--text); text-align: center; margin-bottom: 4px; }
+    /* ── Reviews — clean cards, soft accent ─────── */
+    .section-title { font-family: var(--font-display); font-size: 26px; font-weight: 400; color: var(--text); text-align: center; margin-bottom: 6px; }
     .section-subtitle { font-size: 14px; color: var(--text-light); text-align: center; margin-bottom: 28px; }
     .section-subtitle .stars { color: var(--gold); font-size: 16px; }
     .star-filled { color: var(--gold); }
@@ -95,7 +96,7 @@
     }
     .review-card:hover { transform: translateY(-2px); }
     .review-text { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 12px; }
-    .review-text::before { content: '\201C'; font-size: 36px; color: var(--pink); font-weight: 700; line-height: 0; position: relative; top: 12px; margin-right: 4px; }
+    .review-text::before { content: '\201C'; font-family: var(--font-display); font-size: 32px; color: var(--coral); font-weight: 400; line-height: 0; position: relative; top: 10px; margin-right: 4px; }
     .review-card .stars { font-size: 14px; }
     .review-author { font-size: 13px; font-weight: 700; color: var(--text-mid); margin-top: 4px; }
     .review-cta { text-align: center; padding: 24px 0 0; }
@@ -108,7 +109,7 @@
 
     /* ── Order — bright, action-oriented ──────────── */
     .order-header { text-align: center; padding: 8px 0 24px; }
-    .order-header h2 { font-size: 24px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .order-header h2 { font-family: var(--font-display); font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
     .order-header p { font-size: 15px; color: var(--text-mid); line-height: 1.6; max-width: 320px; margin: 0 auto; }
 
     .order-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
@@ -135,7 +136,7 @@
 
     /* ── Footer ────────────────────────────────────── */
     .footer { text-align: center; padding: 40px 20px; border-top: 1px solid #F0F0F0; }
-    .footer .brand { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .footer .brand { font-family: var(--font-display); font-size: 18px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
     .footer .brand span { color: var(--pink); }
     .footer .links { font-size: 13px; color: var(--text-light); margin-bottom: 8px; }
     .footer .links a { color: var(--pink); text-decoration: none; }
@@ -317,7 +318,7 @@ Keep up the great work, Sarvani!&rdquo;</div>
     <p class="copy">Baked with love in Dallas, TX</p>
   </div>
 
-  <script nonce="RF+zCSbWMhv8blki99Jy7w==">
+  <script nonce="disBjFCiBRBhMAGW5e6Tbg==">
     // Frame-buster
     if (top !== self) { top.location = self.location; }
 

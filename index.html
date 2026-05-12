@@ -8,711 +8,167 @@
   <meta property="og:title" content="Baked By Sarvani">
   <meta property="og:description" content="Homemade custom cakes, freshly baked in Dallas with love.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#FFF9F7">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-ufy2pWRVZyaeVmasG61nUA=='; style-src 'unsafe-inline'; img-src 'self' https://*.smugmug.com data:; connect-src 'none'; font-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-HEtlHuL2cdhBL7EI6I6E0A=='; style-src 'unsafe-inline'; img-src 'self' https://*.smugmug.com data:; connect-src 'none'; font-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none';">
   <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      /* ── Home Baker Palette ── */
-      /* Warm blush & rose — personal, cozy, handmade feel */
-      --font-title: Georgia, 'Times New Roman', serif;
-      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      --bg: #FFF9F7;
-      --bg-warm: #FFF1ED;
-      --bg-card: #FFFFFF;
-      --text: #3D2B2B;
-      --text-secondary: #8C7373;
-      --text-light: #B39E9E;
-      --accent: #D4847C;
-      --accent-soft: #F5DDD9;
-      --accent-deep: #B86B63;
-      --rose: #E8A5A0;
-      --rose-soft: #FDE8E6;
-      --warm-gold: #C9A96E;
-      --shadow: 0 2px 16px rgba(61, 43, 43, 0.06);
-      --shadow-hover: 0 6px 24px rgba(61, 43, 43, 0.12);
-      --radius: 20px;
-      --radius-sm: 12px;
-      --star-color: #C9A96E;
-      --whatsapp: #25D366;
+      /* ── Honeybear-inspired: clean white, coral pink, bright & joyful ── */
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --bg: #FFFFFF;
+      --bg-soft: #FFF5F3;
+      --text: #1A1A1A;
+      --text-mid: #555555;
+      --text-light: #999999;
+      --pink: #E8636B;
+      --pink-soft: #FDE8E9;
+      --pink-deep: #D14B53;
+      --coral: #F4978E;
+      --gold: #D4A853;
+      --green: #25D366;
+      --shadow: 0 1px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+      --radius: 12px;
     }
 
-    body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-    }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
 
-    /* ── Header — Personal, warm intro ────────────── */
-    .header {
-      text-align: center;
-      padding: 56px 24px 28px;
-      background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
-    }
+    /* ── Header — clean, bright, Honeybear style ──── */
+    .header { text-align: center; padding: 60px 24px 32px; }
+    .header h1 { font-size: 32px; font-weight: 800; color: var(--text); letter-spacing: -0.5px; margin-bottom: 12px; }
+    .header h1 span { color: var(--pink); }
+    .header .tagline { font-size: 16px; color: var(--text-mid); font-weight: 400; line-height: 1.5; max-width: 320px; margin: 0 auto 16px; }
+    .header .loc { font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
 
-    .header-icon {
-      font-size: 48px;
-      margin-bottom: 12px;
-      line-height: 1;
-    }
-
-    .header h1 {
-      font-family: var(--font-title);
-      font-size: 36px;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--text);
-      margin-bottom: 8px;
-      letter-spacing: 0.3px;
-    }
-
-    .header .subtitle {
-      font-size: 15px;
-      color: var(--text-secondary);
-      font-weight: 400;
-      line-height: 1.5;
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    .header .location-tag {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 6px 14px;
-      background: var(--bg-card);
-      border-radius: 50px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-light);
-      letter-spacing: 0.5px;
-      box-shadow: var(--shadow);
-    }
-
-    /* ── Tabs ──────────────────────────────────────── */
-    .tabs {
-      display: flex;
-      justify-content: center;
-      gap: 6px;
-      padding: 0 20px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--bg);
-      padding-top: 12px;
-    }
-
+    /* ── Nav tabs — Honeybear-style clean pills ──── */
+    .tabs { display: flex; justify-content: center; gap: 0; padding: 0 20px 24px; position: sticky; top: 0; z-index: 100; background: var(--bg); padding-top: 12px; }
     .tab-btn {
-      padding: 10px 22px;
-      border: 1.5px solid transparent;
-      border-radius: 50px;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      box-shadow: var(--shadow);
+      padding: 12px 28px; border: none; background: none;
+      font-family: var(--font); font-size: 15px; font-weight: 600;
+      color: var(--text-light); cursor: pointer; transition: all 0.2s;
+      border-bottom: 3px solid transparent; border-radius: 0;
     }
+    .tab-btn.active { color: var(--pink); border-bottom-color: var(--pink); }
+    .tab-btn:not(.active):hover { color: var(--text-mid); }
 
-    .tab-btn.active {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-      box-shadow: 0 4px 16px rgba(212, 132, 124, 0.3);
-    }
+    /* ── Content ──────────────────────────────────── */
+    .tab-content { display: none; padding: 0 20px 80px; max-width: 560px; margin: 0 auto; animation: fadeIn 0.3s ease; }
+    .tab-content.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .empty-state { text-align: center; padding: 60px 20px; color: var(--text-light); font-size: 16px; }
 
-    .tab-btn:not(.active):hover {
-      border-color: var(--accent-soft);
-      color: var(--text);
-    }
-
-    /* ── Tab Content ──────────────────────────────── */
-    .tab-content {
-      display: none;
-      padding: 0 16px 100px;
-      max-width: 600px;
-      margin: 0 auto;
-      animation: fadeIn 0.35s ease;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── Filter Pills ─────────────────────────────── */
-    .filter-bar {
-      display: flex;
-      gap: 6px;
-      padding: 4px 0 16px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-
-    .filter-bar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .filter-pill {
-      padding: 7px 14px;
-      border: 1.5px solid var(--accent-soft);
-      border-radius: 50px;
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s;
-    }
-
-    .filter-pill.active {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .filter-pill:not(.active):hover {
-      border-color: var(--rose);
-      color: var(--text);
-    }
-
-    /* ── Gallery Grid ─────────────────────────────── */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .tile {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      aspect-ratio: 4/5;
-      display: flex;
-      align-items: flex-end;
-      background-size: cover;
-      background-position: center;
-      text-decoration: none;
-      color: #fff;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .tile::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.65) 100%);
-      z-index: 0;
-    }
-
-    .tile:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .tile-content {
-      position: relative;
-      z-index: 1;
-      padding: 16px;
-      width: 100%;
-    }
-
-    .tile-title {
-      font-family: var(--font-title);
-      font-size: 15px;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.5);
-      line-height: 1.3;
-      margin-bottom: 2px;
-    }
-
-    .tile-meta {
-      font-size: 12px;
-      color: rgba(255,255,255,0.8);
-      text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-    }
-
-    .tile-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -60%);
-      font-size: 44px;
-      z-index: 1;
-    }
-
-    .tile-no-image {
-      background: linear-gradient(145deg, var(--bg-warm) 0%, var(--accent-soft) 100%);
-    }
-
-    .tile-no-image::before {
-      background: none;
-    }
-
-    .tile-no-image .tile-title {
-      color: var(--text);
-      text-shadow: none;
-    }
-
-    .tile-no-image .tile-meta {
-      color: var(--text-secondary);
-      text-shadow: none;
-    }
-
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text-light);
-      font-size: 16px;
-      font-style: italic;
-    }
-
-    /* ── Feed Layout — alternating featured + pair ── */
-    .feed {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding-top: 8px;
-    }
-
-    .feed-featured {
-      width: 100%;
-      aspect-ratio: 4/5;
-      border-radius: var(--radius);
-      overflow: hidden;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-    }
-
-    .feed-featured img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .feed-featured:hover img {
-      transform: scale(1.03);
-    }
-
-    .feed-pair {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .feed-pair-item {
-      aspect-ratio: 1/1;
-      border-radius: var(--radius);
-      overflow: hidden;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-    }
-
-    .feed-pair-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .feed-pair-item:hover img {
-      transform: scale(1.03);
-    }
+    /* ── Photo Feed — clean, airy, generous spacing ── */
+    .feed { display: flex; flex-direction: column; gap: 16px; }
+    .feed-featured { width: 100%; aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; cursor: pointer; }
+    .feed-featured img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .feed-featured:hover img { transform: scale(1.02); }
+    .feed-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .feed-pair-item { aspect-ratio: 1/1; border-radius: var(--radius); overflow: hidden; cursor: pointer; }
+    .feed-pair-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .feed-pair-item:hover img { transform: scale(1.02); }
 
     /* ── Lightbox ──────────────────────────────────── */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.95);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: lbFadeIn 0.2s ease;
-    }
-
-    @keyframes lbFadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .lb-img {
-      max-width: 92vw;
-      max-height: 88vh;
-      object-fit: contain;
-      border-radius: 4px;
-      user-select: none;
-    }
-
-    .lb-close {
-      position: absolute;
-      top: 16px;
-      right: 20px;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 36px;
-      cursor: pointer;
-      z-index: 1001;
-      padding: 8px;
-      line-height: 1;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-
+    .lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.92); display: flex; align-items: center; justify-content: center; animation: lbIn 0.2s; }
+    @keyframes lbIn { from { opacity: 0; } to { opacity: 1; } }
+    .lb-img { max-width: 94vw; max-height: 90vh; object-fit: contain; border-radius: 6px; user-select: none; }
+    .lb-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: #fff; font-size: 32px; cursor: pointer; z-index: 1001; opacity: 0.7; padding: 8px; }
     .lb-close:hover { opacity: 1; }
-
-    .lb-prev, .lb-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.1);
-      border: none;
-      color: #fff;
-      font-size: 32px;
-      cursor: pointer;
-      z-index: 1001;
-      padding: 16px 12px;
-      border-radius: 50%;
-      line-height: 1;
-      opacity: 0.6;
-      transition: opacity 0.2s, background 0.2s;
-    }
-
+    .lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); border: none; color: #fff; font-size: 28px; cursor: pointer; z-index: 1001; padding: 14px 10px; border-radius: 50%; opacity: 0.7; transition: all 0.2s; }
     .lb-prev { left: 12px; }
     .lb-next { right: 12px; }
-    .lb-prev:hover, .lb-next:hover { opacity: 1; background: rgba(255,255,255,0.2); }
+    .lb-prev:hover, .lb-next:hover { opacity: 1; background: rgba(255,255,255,0.25); }
 
-    @media (max-width: 480px) {
-      .lb-prev, .lb-next { padding: 12px 8px; font-size: 24px; }
-      .lb-close { font-size: 28px; top: 10px; right: 14px; }
-    }
-
-    /* ── Review Cards — like a friend's recommendation ── */
-    .reviews-header {
-      text-align: center;
-      padding: 20px 0 28px;
-    }
-
-    .reviews-header h2 {
-      font-family: var(--font-title);
-      font-size: 24px;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--text);
-      margin-bottom: 8px;
-    }
-
-    .reviews-summary {
-      font-size: 14px;
-      color: var(--text-secondary);
-      font-weight: 500;
-    }
-
-    .reviews-summary .stars {
-      color: var(--star-color);
-      font-size: 18px;
-    }
+    /* ── Reviews — clean cards, pink accent ─────── */
+    .section-title { font-size: 24px; font-weight: 800; color: var(--text); text-align: center; margin-bottom: 4px; }
+    .section-subtitle { font-size: 14px; color: var(--text-light); text-align: center; margin-bottom: 28px; }
+    .section-subtitle .stars { color: var(--gold); font-size: 16px; }
+    .star-filled { color: var(--gold); }
+    .star-empty { color: #E5E5E5; }
 
     .review-card {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      padding: 24px 24px 20px;
-      margin-bottom: 14px;
-      border-left: 3px solid var(--rose);
-      box-shadow: var(--shadow);
-      transition: box-shadow 0.2s;
+      background: var(--bg-soft); border-radius: var(--radius);
+      padding: 24px; margin-bottom: 12px; position: relative;
+      transition: transform 0.2s;
     }
-
-    .review-card:hover {
-      box-shadow: var(--shadow-hover);
-    }
-
-    .review-text {
-      font-family: var(--font-title);
-      font-style: italic;
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--text);
-      margin-bottom: 14px;
-    }
-
-    .review-card .stars {
-      color: var(--star-color);
-      font-size: 15px;
-    }
-
-    .star-filled {
-      color: var(--star-color);
-    }
-
-    .star-empty {
-      color: var(--accent-soft);
-    }
-
-    .review-author {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-light);
-      margin-top: 4px;
-    }
-
-    .review-cta {
-      text-align: center;
-      padding: 28px 0 0;
-    }
-
+    .review-card:hover { transform: translateY(-2px); }
+    .review-text { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 12px; }
+    .review-text::before { content: '\201C'; font-size: 36px; color: var(--pink); font-weight: 700; line-height: 0; position: relative; top: 12px; margin-right: 4px; }
+    .review-card .stars { font-size: 14px; }
+    .review-author { font-size: 13px; font-weight: 700; color: var(--text-mid); margin-top: 4px; }
+    .review-cta { text-align: center; padding: 24px 0 0; }
     .review-cta a {
-      display: inline-block;
-      padding: 12px 28px;
-      border: 2px solid var(--accent);
-      border-radius: 50px;
-      color: var(--accent);
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
+      display: inline-block; padding: 14px 32px;
+      background: var(--pink); color: #fff; border: none; border-radius: 50px;
+      font-size: 14px; font-weight: 700; text-decoration: none; transition: all 0.2s;
     }
+    .review-cta a:hover { background: var(--pink-deep); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(232,99,107,0.3); }
 
-    .review-cta a:hover {
-      background: var(--accent);
-      color: #fff;
-    }
+    /* ── Order — bright, action-oriented ──────────── */
+    .order-header { text-align: center; padding: 8px 0 24px; }
+    .order-header h2 { font-size: 24px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .order-header p { font-size: 15px; color: var(--text-mid); line-height: 1.6; max-width: 320px; margin: 0 auto; }
 
-    /* ── Order Section — personal, friendly ────────── */
-    .order-intro {
-      text-align: center;
-      padding: 24px 16px 8px;
-    }
-
-    .order-intro h2 {
-      font-family: var(--font-title);
-      font-size: 26px;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--text);
-      margin-bottom: 10px;
-    }
-
-    .order-intro p {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      max-width: 340px;
-      margin: 0 auto;
-    }
-
-    .order-steps {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      padding: 24px 0;
-    }
-
-    .order-step {
-      background: var(--bg-card);
-      border-radius: var(--radius);
-      padding: 22px 16px 18px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
+    .order-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+    .order-step { background: var(--bg-soft); border-radius: var(--radius); padding: 20px 14px; text-align: center; }
     .order-step-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--rose-soft);
-      color: var(--accent-deep);
-      font-weight: 700;
-      font-size: 15px;
-      margin-bottom: 10px;
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--pink); color: #fff; font-weight: 800; font-size: 14px; margin-bottom: 10px;
     }
+    .order-step-title { font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 4px; }
+    .order-step-desc { font-size: 12px; color: var(--text-light); line-height: 1.5; }
 
-    .order-step-title {
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-
-    .order-step-desc {
-      font-size: 12px;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
-
-    .order-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 8px 0 24px;
-    }
-
+    .order-buttons { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
     .order-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 24px;
-      border-radius: 50px;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.2s;
-      color: #fff;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 16px 24px; border-radius: 50px; font-family: var(--font);
+      font-size: 15px; font-weight: 700; text-decoration: none; color: #fff; transition: all 0.2s;
     }
-
-    .order-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    }
-
-    .order-btn-instagram {
-      background: linear-gradient(135deg, #833AB4 0%, #E1306C 50%, #F77737 100%);
-    }
-
-    .order-btn-whatsapp {
-      background: var(--whatsapp);
-    }
-
-    .order-note {
-      text-align: center;
-      padding: 12px 20px 0;
-      font-size: 13px;
-      color: var(--text-light);
-      line-height: 1.5;
-    }
-
-    .order-location {
-      text-align: center;
-      padding: 20px 0 0;
-      font-size: 13px;
-      color: var(--text-light);
-      font-weight: 500;
-    }
+    .order-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+    .order-btn-instagram { background: linear-gradient(135deg, #833AB4 0%, #E1306C 50%, #F77737 100%); }
+    .order-btn-whatsapp { background: var(--green); }
+    .order-note { text-align: center; font-size: 13px; color: var(--text-light); line-height: 1.5; padding: 8px 0; }
+    .order-location { text-align: center; font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; padding: 12px 0; }
 
     /* ── Footer ────────────────────────────────────── */
-    .footer {
-      text-align: center;
-      padding: 36px 20px 40px;
-      color: var(--text-light);
-      font-size: 13px;
-      font-weight: 400;
-    }
+    .footer { text-align: center; padding: 40px 20px; border-top: 1px solid #F0F0F0; }
+    .footer .brand { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+    .footer .brand span { color: var(--pink); }
+    .footer .links { font-size: 13px; color: var(--text-light); margin-bottom: 8px; }
+    .footer .links a { color: var(--pink); text-decoration: none; }
+    .footer .links a:hover { text-decoration: underline; }
+    .footer .copy { font-size: 11px; color: #CCC; }
 
-    .footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    .footer .tagline {
-      font-family: var(--font-title);
-      font-style: italic;
-      font-size: 15px;
-      color: var(--text-secondary);
-      margin-bottom: 12px;
-    }
-
-    .footer .credit {
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--text-light);
-      font-weight: 500;
-    }
-
-    .footer .gen-date {
-      margin-top: 8px;
-      font-size: 10px;
-      opacity: 0.4;
-    }
-
-    /* ── Small mobile ──────────────────────────────── */
+    /* ── Responsive ────────────────────────────────── */
     @media (max-width: 374px) {
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-      .tile {
-        aspect-ratio: 4/3;
-      }
-      .order-steps {
-        grid-template-columns: 1fr;
-      }
-      .header h1 {
-        font-size: 28px;
-      }
+      .header h1 { font-size: 26px; }
+      .order-steps { grid-template-columns: 1fr; }
+      .feed-pair { gap: 8px; }
     }
-
-    /* ── Desktop ───────────────────────────────────── */
     @media (min-width: 768px) {
-      .header {
-        padding: 72px 24px 36px;
-      }
-      .header h1 {
-        font-size: 44px;
-      }
-      .tab-btn {
-        padding: 12px 28px;
-        font-size: 15px;
-      }
-      .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-      }
-      .tile-title {
-        font-size: 17px;
-      }
-      .tab-content {
-        max-width: 700px;
-      }
+      .header { padding: 80px 24px 40px; }
+      .header h1 { font-size: 42px; }
+      .tab-content { max-width: 680px; }
+      .feed-pair { gap: 16px; }
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <div class="header-icon">🎂</div>
-    <h1>Baked by Sarvani</h1>
-    <p class="subtitle">We bake cakes for events and parties! Homemade with love in Dallas.</p>
-    <span class="location-tag">Dallas, TX</span>
+    <h1>We're <span>Baked by Sarvani</span></h1>
+    <p class="tagline">Homemade custom cakes for birthdays, baby showers, weddings, and all your sweetest celebrations.</p>
+    <p class="loc">Dallas, TX</p>
   </div>
 
   <div class="tabs">
-    <button class="tab-btn active" data-tab="gallery">Gallery</button>
+    <button class="tab-btn active" data-tab="gallery">Our Cakes</button>
     <button class="tab-btn" data-tab="reviews">Reviews</button>
     <button class="tab-btn" data-tab="order">Order</button>
   </div>
 
-  <!-- ── Gallery Tab ── -->
   <div id="tab-gallery" class="tab-content active">
     <div class="feed">
       <div class="feed-featured" data-full="https://photos.smugmug.com/photos/i-FxNfCPt/0/LrTgLxbkK3kKPtTTwM3D5tmRTs949w845RWp9ntqg/L/i-FxNfCPt-L.jpg"><img src="https://photos.smugmug.com/photos/i-FxNfCPt/0/Mv9kKn8C5DN4FXw2TRWMXRhXGjNSqfVghJ7HLDxrC/M/i-FxNfCPt-M.jpg" alt="Cake by Sarvani" loading="lazy" referrerpolicy="no-referrer"></div>
@@ -763,7 +219,6 @@
     </div>
   </div>
 
-  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" style="display:none">
     <button class="lb-close" aria-label="Close">&times;</button>
     <button class="lb-prev" aria-label="Previous">&#8249;</button>
@@ -771,14 +226,11 @@
     <img id="lb-img" class="lb-img" alt="Cake by Sarvani">
   </div>
 
-  <!-- ── Reviews Tab ── -->
   <div id="tab-reviews" class="tab-content">
-    <div class="reviews-header">
-      <h2>Kind words from happy customers</h2>
-      <p class="reviews-summary">
-        <span class="stars"><span class="star-filled">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span> 4.9/5 from 8 reviews
-      </p>
-    </div>
+    <h2 class="section-title">Cake Lovers</h2>
+    <p class="section-subtitle">
+      <span class="stars"><span class="star-filled">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span> 4.9/5 from 8 happy customers
+    </p>
     <div class="reviews-list">
       <div class="review-card">
       <div class="review-text">&ldquo;Cake is very good! Thank you so much for the beautiful and tasty cake. I will sure refer you!&rdquo;</div>
@@ -827,44 +279,27 @@ Keep up the great work, Sarvani!&rdquo;</div>
         
     </div>
     <div class="review-cta">
-      <a href="https://bakedbysarvani-reviews.netlify.app" target="_blank" rel="noreferrer noopener">Loved your cake? Leave a review</a>
+      <a href="https://bakedbysarvani-reviews.netlify.app" target="_blank" rel="noreferrer noopener">Leave a Review</a>
     </div>
   </div>
 
-  <!-- ── Order Tab ── -->
   <div id="tab-order" class="tab-content">
-    <div class="order-intro">
+    <div class="order-header">
       <h2>Let's make your cake</h2>
-      <p>Every cake is baked fresh to order. Just tell me what you're celebrating and I'll take it from there.</p>
+      <p>Every cake is baked fresh to order. Tell me what you're celebrating and I'll take it from there.</p>
     </div>
 
     <div class="order-steps">
-      <div class="order-step">
-        <div class="order-step-num">1</div>
-        <div class="order-step-title">Send a message</div>
-        <div class="order-step-desc">DM me on Instagram or WhatsApp</div>
-      </div>
-      <div class="order-step">
-        <div class="order-step-num">2</div>
-        <div class="order-step-title">Share your idea</div>
-        <div class="order-step-desc">Theme, flavors, size, and when you need it</div>
-      </div>
-      <div class="order-step">
-        <div class="order-step-num">3</div>
-        <div class="order-step-title">Get a quote</div>
-        <div class="order-step-desc">I'll share pricing and confirm details</div>
-      </div>
-      <div class="order-step">
-        <div class="order-step-num">4</div>
-        <div class="order-step-title">Pick up &amp; enjoy</div>
-        <div class="order-step-desc">Fresh, beautiful, and ready to celebrate</div>
-      </div>
+      <div class="order-step"><div class="order-step-num">1</div><div class="order-step-title">Message me</div><div class="order-step-desc">DM on Instagram or WhatsApp</div></div>
+      <div class="order-step"><div class="order-step-num">2</div><div class="order-step-title">Share your idea</div><div class="order-step-desc">Theme, flavors, size &amp; date</div></div>
+      <div class="order-step"><div class="order-step-num">3</div><div class="order-step-title">Get a quote</div><div class="order-step-desc">I'll confirm pricing &amp; details</div></div>
+      <div class="order-step"><div class="order-step-num">4</div><div class="order-step-title">Pick up &amp; enjoy</div><div class="order-step-desc">Fresh and ready to celebrate</div></div>
     </div>
 
     <div class="order-buttons">
       <a href="https://www.instagram.com/bakedbysarvani/" class="order-btn order-btn-instagram" target="_blank" rel="noreferrer noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        DM me on Instagram
+        DM on Instagram
       </a>
       <a href="https://wa.me/15307278598" class="order-btn order-btn-whatsapp" target="_blank" rel="noreferrer noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.35 0-4.514-.81-6.228-2.164l-.435-.347-3.012 1.01 1.01-3.012-.348-.436A9.948 9.948 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
@@ -872,20 +307,17 @@ Keep up the great work, Sarvani!&rdquo;</div>
         </a>
     </div>
 
-    <p class="order-note">Pickup in Dallas. I typically need 2-3 days notice for custom designs.</p>
-
-    <div class="order-location">
-      Serving Dallas-Fort Worth, TX
-    </div>
+    <p class="order-note">Pickup in Dallas &middot; 2-3 days notice for custom designs</p>
+    <p class="order-location">Serving Dallas-Fort Worth, TX</p>
   </div>
 
   <div class="footer">
-    <p class="tagline">Baked with love, one cake at a time</p>
-    <p class="credit">@bakedbysarvani &middot; @rsquare_studios</p>
-    <p class="gen-date">Generated May 12, 2026</p>
+    <p class="brand">Baked by <span>Sarvani</span></p>
+    <p class="links"><a href="https://www.instagram.com/bakedbysarvani/" target="_blank" rel="noreferrer noopener">@bakedbysarvani</a> &middot; @rsquare_studios</p>
+    <p class="copy">Baked with love in Dallas, TX</p>
   </div>
 
-  <script nonce="ufy2pWRVZyaeVmasG61nUA==">
+  <script nonce="HEtlHuL2cdhBL7EI6I6E0A==">
     // Frame-buster
     if (top !== self) { top.location = self.location; }
 

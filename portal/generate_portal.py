@@ -116,23 +116,29 @@ def load_reviews() -> list:
     with open(REVIEWS_FILE, "r", encoding="utf-8") as f:
         raw = json.load(f)
 
-    # Deduplicate by normalized (customer_name, review_text)
-    seen = set()
+    # Deduplicate by normalized review text (catches same text with different names)
+    import re
+    seen_texts = set()
     unique = []
     for r in raw:
         name = r.get("customer_name", "").strip()
         text = r.get("review_text", "").strip()
-        # Normalize: remove escaped characters for dedup comparison
-        norm_text = text.replace("\\!", "!").replace("\\?", "?").replace("\n", " ").strip()
-        key = (name.lower(), norm_text.lower())
-        if key not in seen:
-            seen.add(key)
-            unique.append({
-                "name": name,
-                "rating": r.get("rating", 5),
-                "text": text.replace("\\!", "!").replace("\\?", "?"),
-                "date": r.get("date", ""),
-            })
+        # Normalize: remove escaped chars, emoji codes, extra spaces
+        norm_text = text.replace("\\!", "!").replace("\\?", "?").replace("\n", " ")
+        norm_text = re.sub(r":[a-z_]+:", "", norm_text)  # remove :blush: etc
+        norm_text = re.sub(r"\s+", " ", norm_text).strip().lower()
+        if norm_text in seen_texts:
+            continue
+        seen_texts.add(norm_text)
+        # Skip generic placeholder names
+        if name.lower() in ("happy customer",):
+            continue
+        unique.append({
+            "name": name,
+            "rating": r.get("rating", 5),
+            "text": text.replace("\\!", "!").replace("\\?", "?"),
+            "date": r.get("date", ""),
+        })
     # Sort by date descending (newest first)
     unique.sort(key=lambda x: x.get("date", ""), reverse=True)
     return unique

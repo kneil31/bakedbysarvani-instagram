@@ -509,7 +509,7 @@ def generate_html(galleries: list, reviews: list, whatsapp: str, gallery_images:
   <div class="tabs">
     <button class="tab-btn active" data-tab="gallery">Our Cakes</button>
     <button class="tab-btn" data-tab="reviews">Reviews</button>
-    <button class="tab-btn" data-tab="order">Order</button>
+    <button class="tab-btn" data-tab="order">How to Order</button>
   </div>
 
   <div id="tab-gallery" class="tab-content active">
